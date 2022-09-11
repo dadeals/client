@@ -1,0 +1,129 @@
+
+
+<div class="container" style="background-color: #5C609F">
+
+  <nav class="row navbar navbar-expand-md navbar-light bd-navbar" >
+
+      <div class="col-4 col-md-1">
+        <a class="navbar-brand cp-0 me-2" [routerLink]="['/']" 
+           style=" font-size: 1.75rem; font-weight: 700; color: #F5DF4D;">Da<span class="text-white">Deals</span></a>
+      </div>
+
+      <div class="col-4 offset-4 offset-md-0 col-md-1" >
+        <button class="navbar-toggler float-right"
+                type="button"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
+                aria-label="Toggle navigation"
+                [attr.aria-expanded]="isExpanded"
+                (click)="toggle()"
+                >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      </div>
+
+      <div class="col-md-10 d-none d-sm-block" >
+        <div class="row">
+          <div class="d-flex my-auto col-md-4">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit" style="background-color: #F5DF4D;" ><i class="bi bi-search"></i></button>
+          </div>
+
+          <ul class="nav justify-content-end col-md-8">
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link btn"  [routerLink]="['/']">
+                <i class="bi bi-person-circle"></i>
+                <span> {{userName}} </span>
+                <span class="badge badge-info badge-pill">14</span>
+              </a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link btn" [routerLink]="['/counter',1234]">
+                <i class="bi bi-heart-fill"></i>
+                <span> {{wishList}} </span>
+                <span class="badge badge-info badge-pill">14</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn" (click)="go()" >
+                <i class="bi bi-cart-fill"></i>
+                <span> {{total}} </span>
+                <span class="badge badge-info badge-pill">14</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+          
+      </div>
+
+  </nav>
+
+  <nav class="row navbar navbar-expand-md navbar-light bd-navbar " style="background-color: #5C609F">
+      <div class="col-12" >
+        <div class="navbar-collapse collapse" [ngClass]="{ show: isExpanded }" >
+          <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0"  style="font-size: 1.1rem; font-weight: 600;">
+            <li class="nav-item col-6 col-md-auto px-0" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" aria-current="page" [routerLink]="['/clothing-shoes']">Clothing & Shoes</a>
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" aria-selected="true" [routerLink]="['/home-living']">Home & Living</a>
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white " aria-current="page" [routerLink]="['/curtains-mats']">Curtains & Mats </a>
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white " aria-current="page" [routerLink]="['/sewing-fabrics']">Sewing & Fabrics</a>
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" aria-current="page" [routerLink]="['/flowers-function']">Flowers & Function</a>
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" aria-current="page" [routerLink]="['/beads-jewellery']">Beads & Jewellery</a>
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" aria-current="page" [routerLink]="['/stationery-toys']">Stationery & Toys</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto px-0 d-block d-sm-none" [routerLinkActive]="['link-active']">
+              <hr class="d-md-none text-white-50">
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0 d-block d-sm-none" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" [routerLink]="['/']">
+                <i class="bi bi-person-circle"></i>
+                <span> {{userName}} </span>
+                <span class="badge badge-info badge-pill">14</span>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-md-auto px-0 d-block d-sm-none" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" [routerLink]="['/counter']">
+                <i class="bi bi-heart-fill"></i>
+                <span> {{wishList}} </span>
+                <span class="badge badge-info badge-pill">14</span>
+              </a>
+            </li>
+            <li class="nav-item col-12 col-md-auto px-0 d-block d-sm-none" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-white" [routerLink]="['/fetch-data']">
+                <i class="bi bi-cart-fill"></i>
+                <span> {{total}} </span>
+                <span class="badge badge-info badge-pill">14</span>
+              </a>
+            </li>
+            <li class="nav-item col-12 px-0 d-block d-sm-none" [routerLinkActive]="['link-active']">
+              <div class="d-flex my-auto">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit"  style="background-color: #F5DF4D;"><i class="bi bi-search"></i></button>
+              </div>
+            </li>
+          </ul>
+
+
+        </div>
+
+      </div>
+
+
+
+  </nav>
+
+</div>

@@ -1,0 +1,34 @@
+<div class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators" *ngIf="displayingCardActive">
+    <li data-bs-target="#myCarousel"
+        *ngFor="let index of [0,1,2];" [attr.data-bs-slide-to]="index"
+        [ngClass]="{active:displayingCardActive[index]}"
+        (click)="clickSlides(index)"></li>
+  </ol>
+
+  <div class="carousel-inner" *ngIf="cards">
+
+    <div class="carousel-item" *ngFor="let card of cards; index as index" [ngClass]="{active:displayingCardActive[index]}">
+
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>{{card.title}}</h1>
+          <p>{{card. describution}}</p>
+          <p><a class="btn btn-lg btn-primary">{{card.buttonName}}</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <a class="carousel-control-prev" role="button" (click)="prev()">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" role="button" (click)="next()">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>

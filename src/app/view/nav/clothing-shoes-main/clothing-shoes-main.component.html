@@ -1,0 +1,263 @@
+
+
+<div>
+  <nav s aria-label="breadcrumb row d-none d-sm-block">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+      <a [routerLink]="['/']">Home</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page" [ngClass]="{active:true}">Clothing & Shoes</li>
+    </ol>
+  </nav>
+
+  <div class="row">
+
+    <div class="col-12 col-md" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+
+      <div class="row" style="width:100%;">
+        <div class="col-md border-bottom mb-3 pb-1 justify-content-center" style="color: #939597;">
+          <h2 class="m-0">
+            <span class="d-inline-block text-black mr-2 mr-sm-3 my-1" style="color:#5C609F; font-size: 1.5rem; font-weight: 700;">Women's Top</span>
+            <a href="promotions" class="btn btn-sm text-white mb-1" data-type="all" style="background-color:#BA5B3F;">
+              <span>View All</span>
+              <i class="bi bi-arrow-right-short" style=" text-align: center;"></i>
+            </a>
+          </h2>
+
+        </div>
+
+      </div>
+
+      <div class="row" *ngIf="womenTopItems">
+
+        <div class="col-6 col-md-2" *ngFor="let item of womenTopItems" style="text-align:center; padding:0;">
+          <a class="btn btn-link" href="#" style="padding:6px">
+            <div class="card text-center">
+
+              <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+              <div class="card-body bg-light">
+                <span class="card-text">{{item.name}}</span>
+              </div>
+
+            </div>
+
+          </a>
+        </div>
+      </div>
+
+      <h5 id="item-1-1">Women's Bottoms</h5>
+      <div class="row" *ngIf="womenBottomItems">
+
+        <div class="col-6 col-md-4" *ngFor="let item of womenBottomItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card-header" style='text-align:center;'>
+        Women's Dresses
+      </div>
+      <div class="row" *ngIf="womenDressItems">
+
+        <div class="col-6 col-md-4" *ngFor="let item of womenDressItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Men's Top
+      </div>
+
+      <div class="row" *ngIf="menTopItems">
+        <div class="col-6 col-md-4" *ngFor="let item of menTopItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card-header" style='text-align:center;'>
+        Men's Bottoms
+      </div>
+      <div class="row" *ngIf="menBottomItems">
+
+        <div class="col-6 col-md-4" *ngFor="let item of menBottomItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card-header" style='text-align:center;'>
+        Men's Sets
+      </div>
+      <div class="row" *ngIf="menSetItems">
+
+        <div class="col-6 col-md-4" *ngFor="let item of menSetItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Kid's Top
+      </div>
+
+      <div class="row" *ngIf="kidTopItems">
+        <div class="col-6 col-md-4" *ngFor="let item of kidTopItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Kid's Dresses
+      </div>
+
+      <div class="row" *ngIf="kidDressItems">
+        <div class="col-6 col-md-4" *ngFor="let item of kidDressItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Kid's Bottoms
+      </div>
+
+      <div class="row" *ngIf="kidBottomItems">
+        <div class="col-6 col-md-4" *ngFor="let item of kidBottomItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Kid's Set
+      </div>
+
+      <div class="row" *ngIf="kidSetItems">
+        <div class="col-6 col-md-4" *ngFor="let item of kidSetItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Hats
+      </div>
+
+      <div class="row" *ngIf="hatItems">
+        <div class="col-6 col-md-4" *ngFor="let item of hatItems" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Underwears
+      </div>
+
+      <div class="row" *ngIf="underwears">
+        <div class="col-6 col-md-4" *ngFor="let item of underwears" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-header" style='text-align:center;'>
+        Accessories
+      </div>
+
+      <div class="row" *ngIf="accessories">
+        <div class="col-6 col-md-4" *ngFor="let item of accessories" style='text-align:center;'>
+          <div class="card">
+            <img class="card-img-top" src="{{item.pic}}" alt="Card image cap">
+            <button class="btn btn-lg" style="background-color:transparent;">
+              {{item.name}}
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>

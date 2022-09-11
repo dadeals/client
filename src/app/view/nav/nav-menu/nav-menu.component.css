@@ -1,0 +1,23 @@
+
+
+.active {
+  background-color: #939597;
+  color: white;
+}
+
+a:hover {
+  background-color: #939597;
+  border-radius: 4px;
+}
+
+a.nav-link.btn {
+  background-color: #363B48;
+  color:white;
+  margin: 0px 3px;
+}
+
+
+  a.nav-link.btn:hover {
+    background-color: white;
+    color: #363B48;
+  }
